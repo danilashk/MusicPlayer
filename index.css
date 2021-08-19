@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #101010;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+.wrapper {
+    padding: 40px 20px;
+}
+.music-list {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.description {
+    margin-left: 60px;
+}
+.description h3 {
+    color: white;
+}
+.description span, p {
+    color: #8d8d8d;
+}
+.music-item {
+    border: 1px solid gray;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    margin-bottom: 12px;
+}
+.music-item:last-child {
+    margin-bottom: 0;
+}
+
+/*PLAYER-SMALL*/
+.player-small {
+    background-color: #171717;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+}
+.player-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+.textTrack {
+    font-size: 16px;
+    color: white;
+}
+.textStyle {
+    color: #8d8d8d;
+    font-size: 14px;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    color: #101010;
+}
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rightClick, .leftClick {
+    background-color: white;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+}
+.rightClick {
+    margin-right: 12px;
+}
+.leftClick {
+    margin-right: 24px;
+}
+.play {
+    margin-right: 12px;
+    background-color: rgb(43, 132, 211);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.progress-bar {
+    border: 3px solid white;
+    position: relative;
+}
+.progress-bar span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgb(43, 132, 211);
+    position: absolute;
+    top: -8px;
+    left: -1px;
+}
+.open {
+    display: flex;
+    flex-direction: column;
+    cursor: grab;
+}
+.open span {
+    margin-bottom: 5px;
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: white;
+}
+.open span:last-child {
+    margin-bottom: 0;
+}
+
+/*PLAYER-FULL*/
+.player-full {
+    z-index: 10;
+    background-color: #171717;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid gray;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(0px, 120%);
+    transition: 0.5s ease;
+}
+.player-full._active {
+    transform: translate(0px, 0px);
+}
+.player-full .progress-bar {
+    margin-bottom: 24px;
+}
+.player-full .player-bottom {
+    flex-direction: column;
+    align-items: center;
+}
+.player-full .player-bottom .left {
+    margin-bottom: 12px;
+}
+.close {
+    width: 50px;
+    margin: 0 auto;
+    position: relative;
+    top: -70px;
+}
