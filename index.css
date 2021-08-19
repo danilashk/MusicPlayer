@@ -135,9 +135,11 @@ body {
     justify-content: center;
     transform: translate(0px, 120%);
     transition: 0.5s ease;
+    opacity: 0;
 }
 .player-full._active {
     transform: translate(0px, 0px);
+    opacity: 100%;
 }
 .player-full .progress-bar {
     margin-bottom: 24px;
